@@ -1,0 +1,8 @@
+rootProject.name = 'video-rental'
+
+include "db", "db:generator"
+include "common"
+include "customer"
+include "movie"
+include "pricing"
+include "bonus"

@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'idea'
+}
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jooq:jooq:3.11.9'
+    implementation 'org.jooq:jooq-codegen:3.11.9'
+    implementation 'org.liquibase:liquibase-core:3.6.2'
+    implementation 'com.h2database:h2:1.4.198'
+    implementation 'org.springframework:spring-context:5.1.4.RELEASE'
+
+    implementation 'org.postgresql:postgresql:42.2.5'
+}
