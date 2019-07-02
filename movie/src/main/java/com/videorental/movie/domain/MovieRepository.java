@@ -2,16 +2,18 @@ package com.videorental.movie.domain;
 
 import com.videorental.common.movie.MovieId;
 import com.videorental.movie.command.NewMovieCommand;
-import com.videorental.movie.dto.MovieDetails;
+import com.videorental.movie.dto.MovieDetailsDto;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * @author oleciwoj
  */
-interface MovieRepository {
+public interface MovieRepository {
 
-    MovieId add(NewMovieCommand cmd);
+    MovieId save(NewMovieCommand cmd);
 
-    Optional<MovieDetails> get(MovieId id);
+    List<MovieDetailsDto> findAllById(Set<MovieId> ids);
 }
