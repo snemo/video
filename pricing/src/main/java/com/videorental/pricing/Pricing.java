@@ -8,7 +8,7 @@ import com.videorental.pricing.command.CalculatePriceCommand;
  */
 public interface Pricing {
 
-    Money renting(CalculatePriceCommand cmd);
+    Money rent(CalculatePriceCommand cmd);
 
-    Money surcharges(CalculatePriceCommand cmd);
+    Money surcharge(CalculatePriceCommand cmd);
 }
