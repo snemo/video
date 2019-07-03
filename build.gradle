@@ -4,13 +4,22 @@ plugins {
 }
 
 allprojects {
-    group = 'com.nuxplanet.video'
+    group = 'com.videorental'
     version = '0.0.1-SNAPSHOT'
 
     sourceCompatibility = 11
     targetCompatibility = 11
 
+    
+
     repositories {
         mavenCentral()
     }
 }
+
+subprojects {
+    ext {
+        springVersion = '5.1.4.RELEASE'
+    }
+}
+

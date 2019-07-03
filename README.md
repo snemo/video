@@ -15,6 +15,12 @@ to the separate service/microservice.
 * Liquibase
 * Spock
 
+## Open issues
+* build issue
+ WARNING: An illegal reflective access operation has occurred
+ It is problem with Groovy and Java 11, please skip it for now, util will be solved in Groovy
+ More details in official ticket: https://issues.apache.org/jira/browse/GROOVY-8339
+
 ## API documentation
 API documentation is available via Swagger
 http://localhost:8089/swagger-ui.html#/
