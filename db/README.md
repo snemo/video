@@ -1,9 +1,5 @@
-# Customer module
+# Database schema versions and JOOQ generator
 
 ## Responsibilities
-Customer module is storing only information about customers. 
-For integration please use only main Facade.
-
-## Architecture
-This module should be treated as simple CRUD module. 
-From business perspective this should be totally enough.
+Database schema is versioned by Liquibase.
+JOOQ is generating Java classes based on current schema version for each build.

@@ -1,5 +1,5 @@
-# Common module
+# Invoice module
 
-## Responsibilities
-Module contains all common staff shared across the system.
-Please do not overuse.
+## Responsibility
+Movie module is creating and storing invoices. Invoices are created based on the rent event
+emitted by rental component 
