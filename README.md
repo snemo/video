@@ -18,6 +18,7 @@ The component size should be small enough, so when you do rm -rf you can write i
 Module communication/coupling can be done ONLY through facades or by emitting events.
 
 ## Framework/library stack
+* Java 11
 * Spring Boot
 * JOOQ
 * Liquibase
