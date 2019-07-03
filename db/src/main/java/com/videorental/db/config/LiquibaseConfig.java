@@ -10,6 +10,8 @@ import javax.sql.DataSource;
 @Configuration
 public class LiquibaseConfig {
 
+    public static final String CHANGELOG_PATH = "liquibase/master.xml";
+
     @Bean
     public SpringLiquibase liquibase(DataSource dataSource) {
         SpringLiquibase liquibase = prepareLiquibaseConfig(dataSource);
@@ -28,7 +30,7 @@ public class LiquibaseConfig {
     private SpringLiquibase prepareLiquibaseConfig(DataSource dataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setDataSource(dataSource);
-        liquibase.setChangeLog("classpath:liquibase/master.xml");
+        liquibase.setChangeLog("classpath:" + CHANGELOG_PATH);
 
         return liquibase;
     }

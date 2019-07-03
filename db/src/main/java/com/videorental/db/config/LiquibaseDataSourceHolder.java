@@ -12,6 +12,8 @@ import org.jooq.impl.DSL;
 
 import javax.sql.DataSource;
 
+import static com.videorental.db.config.LiquibaseConfig.CHANGELOG_PATH;
+
 /**
  * @author oleciwoj
  */
@@ -26,7 +28,7 @@ public class LiquibaseDataSourceHolder {
                 .findCorrectDatabaseImplementation(
                         new JdbcConnection(ds.getConnection()));
 
-        Liquibase liquibase = new Liquibase("liquibase/master.xml", new ClassLoaderResourceAccessor(), database);
+        Liquibase liquibase = new Liquibase(CHANGELOG_PATH, new ClassLoaderResourceAccessor(), database);
         liquibase.update(new Contexts());
 
         return ds;
