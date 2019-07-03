@@ -1,0 +1,18 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:emailhandler2;DB_CLOSE_DELAY=-1;
+    username: sa
+    password: sa
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
