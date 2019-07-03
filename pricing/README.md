@@ -1,6 +1,6 @@
 # Pricing module
 
-## Responsibility
+## Responsibilities
 Pricing module is only responsible for storing price lists 
 and for movie pricing 
 

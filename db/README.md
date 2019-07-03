@@ -1,7 +1,7 @@
-# Movie module
+# Customer module
 
 ## Responsibilities
-Movie module is storing only information about movies. 
+Customer module is storing only information about customers. 
 For integration please use only main Facade.
 
 ## Architecture

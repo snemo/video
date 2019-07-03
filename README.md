@@ -23,6 +23,7 @@ Module communication/coupling can be done ONLY through facades or by emitting ev
 * JOOQ
 * Liquibase
 * Spock
+* Swagger
 
 ## Open issues
 * build issue

@@ -1,6 +1,6 @@
 # Rental module
 
-## Responsibility
+## Responsibilities
 Rental module is only responsible for renting movies. Renting should be done only through facade.
 
 ## Architecture
