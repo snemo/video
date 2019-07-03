@@ -1,4 +1,4 @@
-package com.videorental.common.customer;
+package com.videorental.common.rental;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -15,10 +15,10 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 @ToString
 @EqualsAndHashCode
-public class CustomerId {
+public class OrderId {
     private final String id;
 
-    private CustomerId(String id) {
+    private OrderId(String id) {
         this.id = id;
     }
 
@@ -27,14 +27,14 @@ public class CustomerId {
         return id;
     }
 
-    public static CustomerId generate() {
-        return new CustomerId(UUID.randomUUID().toString());
+    public static OrderId generate() {
+        return new OrderId(UUID.randomUUID().toString());
     }
 
     @JsonCreator
-    public static CustomerId of(String id) {
+    public static OrderId of(String id) {
         checkNotNull(id, "Book ID cannot be null");
-        checkArgument(id.length() == 36, "Customer ID has invalid size %s", id);
-        return new CustomerId(id);
+        checkArgument(id.length() == 36, "Book ID has invalid size %s", id);
+        return new OrderId(id);
     }
 }

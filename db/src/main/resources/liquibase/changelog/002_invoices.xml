@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="002" author="oleciwoj">
+        <createTable tableName="invoices">
+            <column name="invoice_id" type="varchar(36)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_id" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="customer_id" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="total_price" type="currency">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="invoice_rows">
+            <column name="invoice_id" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="book_id" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="currency">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

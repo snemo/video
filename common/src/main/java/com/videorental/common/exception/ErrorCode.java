@@ -13,9 +13,13 @@ import java.util.stream.Stream;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ErrorCode {
 
-    API(100, "Issue in API component"),
-    WEB(200, "Issue in WEB component"),
-    DB(300, "DB issue");
+    CUSTOMER(100, "Issue in customer component"),
+    BONUS(200, "Issue in bonus component"),
+    INVOICE(300, "Issue in invoice component"),
+    MOVIE(400, "Issue in movie store"),
+    PRICING(500, "Issue in pricing component"),
+    RENTAL(600, "Issue in rental component"),
+    DB(700, "DB issue");
 
     private final long code;
     private final String description;

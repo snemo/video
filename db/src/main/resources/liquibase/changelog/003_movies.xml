@@ -6,17 +6,24 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet id="001" author="oleciwoj">
-        <createTable tableName="customers">
+    <changeSet id="003" author="oleciwoj">
+        <createTable tableName="movies">
             <column name="id" type="varchar(36)">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="firstname" type="varchar(10)">
+            <column name="title" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="lastname" type="varchar(50)">
+            <column name="category" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
+    </changeSet>
+    <changeSet id="003-dev" author="oleciwoj">
+        <loadData file="liquibase/test/movies.csv"
+                  separator=";"
+                  tableName="movies">
+
+        </loadData>
     </changeSet>
 </databaseChangeLog>

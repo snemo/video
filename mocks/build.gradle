@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+    implementation project(':common')
+    implementation project(':movie')
+    implementation project(':pricing')
+
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+}

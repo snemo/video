@@ -70,5 +70,4 @@ class PriceStrategyManagerSpec extends Specification {
         5           || Money.of(30)         || Money.of(150)
         10          || Money.of(180)        || Money.of(300)
     }
-
 }
