@@ -1,13 +1,21 @@
 # Video Rental Store
 
-## Architecture
+## Summary
+This is a very simple application of video rental store. It is not production ready, because there is still missing
+better error handling and renting module is not tracking rented movies properly (transactions/locking is missing).
 
+
+## Architecture
 The architecture of this application is based on "Modular Monolith" pattern.
 Each module is a separate bounded context which can have a different structure and architecture 
 depend on the business needs.
 
 Such a architecture is flexible for changes and also in future some of the modules can be extracted easily
-to the separate service/microservice.
+to the separate service/microservice. 
+
+The component size should be small enough, so when you do rm -rf you can write it from scratch in max 2 weeks.
+
+Module communication/coupling can be done ONLY through facades or by emitting events.
 
 ## Framework/library stack
 * Spring Boot
@@ -20,6 +28,10 @@ to the separate service/microservice.
  WARNING: An illegal reflective access operation has occurred
  It is problem with Groovy and Java 11, please skip it for now, util will be solved in Groovy
  More details in official ticket: https://issues.apache.org/jira/browse/GROOVY-8339
+ 
+## How to build/start
+    ./gradlew clean build
+    ./gradlew bootRun
 
 ## API documentation
 API documentation is available via Swagger
