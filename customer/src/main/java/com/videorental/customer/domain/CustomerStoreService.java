@@ -1,4 +1,4 @@
-package com.videorental.customer.application;
+package com.videorental.customer.domain;
 
 import com.videorental.common.customer.CustomerId;
 import com.videorental.customer.CustomerStore;

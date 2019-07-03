@@ -1,6 +1,7 @@
-package com.videorental.customer.application
+package com.videorental.customer
 
 import com.videorental.customer.command.CreateCustomerCommand
+import com.videorental.customer.domain.CustomerStoreService
 import com.videorental.customer.infrastructure.CustomerRepositoryStub
 import spock.lang.Specification
 
@@ -8,9 +9,9 @@ import spock.lang.Specification
  *
  * @author oleciwoj
  */
-class CustomerStoreServiceSpec extends Specification {
+class CustomerStoreSpec extends Specification {
 
-    CustomerStoreService service = new CustomerStoreService(new CustomerRepositoryStub())
+    CustomerStore service = new CustomerStoreService(new CustomerRepositoryStub())
 
     def "add a new customer"() {
         given:
