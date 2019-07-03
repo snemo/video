@@ -19,14 +19,7 @@ public class InvoiceDto {
 
     private final OrderId order;
     private final CustomerId customer;
-    private final List<InvoiceItem> items;
     private final Money totalPrice;
-
-    @Value
-    public static class InvoiceItem {
-        private final MovieId movie;
-        private final Money price;
-    }
 
     public static InvoiceDto of(InvoicesRecord record) {
         return builder()
