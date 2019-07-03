@@ -7,15 +7,20 @@ plugins {
 dependencies {
     implementation project(':common')
     implementation project(':db')
+    implementation project(':movie')
+
+    // Spring
+    compileOnly 'org.springframework:spring-web:5.1.4.RELEASE'
+    compileOnly 'org.springframework:spring-context:5.1.4.RELEASE'
+    compileOnly 'org.springframework:spring-tx:5.1.4.RELEASE'
 
     implementation 'org.jooq:jooq:3.11.9'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.0'
-    implementation 'org.springframework:spring-context:5.1.4.RELEASE'
-    implementation 'org.springframework:spring-tx:5.1.4.RELEASE'
     compileOnly 'org.projectlombok:lombok:1.18.4'
-    compile 'org.codehaus.groovy:groovy-all:2.5.6'
 
     // TEST
+    testImplementation project(':mocks')
+    
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testRuntimeOnly'org.junit.jupiter:junit-jupiter-engine:5.1.0'
     testCompile 'com.h2database:h2:1.4.198'
